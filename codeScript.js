@@ -91,6 +91,8 @@ function getConversationByInterval(interval, clientId, environment){
     apiInstance.postAnalyticsConversationsTranscriptsQuery(body)
     .then((data) => {
         console.log(`postAnalyticsConversationsTranscriptsQuery success! data: ${JSON.stringify(data, null, 2)}`);
+        var resultado = document.getElementById("resultado");
+        resultado.innerHTML = "<span >"+JSON.stringify(data, null, 2)+"</span>"    ;
     })
     .catch((err) => {
         console.log('There was a failure calling postAnalyticsConversationsTranscriptsQuery');
