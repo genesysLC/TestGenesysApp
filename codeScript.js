@@ -76,7 +76,7 @@ function getConversationByInterval(interval, clientId, environment){
     console.log(' X ');
     const client = platformClient.ApiClient.instance;
     client.setEnvironment(ENVIRONMENT);
-    client.loginImplicitGrant(CLIENT_ID, 'https://xdrui22.github.io/testGenesysAPP/index.html?clientId='+clientId+'&environment='+environment, { state: '' })
+    client.loginImplicitGrant(CLIENT_ID, 'https://genesyslc.github.io/TestGenesysApp/index.html?clientId='+clientId+'&environment='+environment, { state: '' })
     .then((data) => {
         console.log(data);
         // Do authenticated things
