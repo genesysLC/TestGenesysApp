@@ -1,0 +1,27 @@
+<html>  
+    <head>    
+        <!-- Include the CJS SDK -->
+        <script src="https://sdk-cdn.mypurecloud.com/javascript/123.0.0/purecloud-platform-client-v2.min.js"></script>
+
+        <script type="text/javascript">
+            // Obtain a reference to the platformClient object
+            const platformClient = require('platformClient');
+        </script>
+        <script type="text/javascript" src="codeScript.js"></script>
+    </head>  
+    <body>
+        <p>App example ClientApp</p>  
+        <form>               
+            <label>Palabra clave:</label><br>
+            <input type="text" id="keyWord" name="keyWord" value=""><br>
+            <br>
+            <label>Intervalo de tiempo</label><br>
+            <label>Inicio: </label><input type="datetime-local" id="intervalInitial" name="intervalInitial" value="" required><br>
+            <label>Fin:    </label><input type="datetime-local" id="intervalFinal" name="intervalFinal" value="" required><br>
+            <br>
+            <span id="error"></span>
+            <br>
+            <input type="button" value="Get data" onclick="mainFunction()"/>  
+        </form>  
+    </body>  
+</html>
